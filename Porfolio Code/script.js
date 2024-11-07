@@ -38,8 +38,20 @@ function myMenuFunction(){
         const link = document.createElement('a');
         
         // Set the file path to your PNG file in local storage
-        link.href = 'assets/cv.png'; // Adjust the path based on your folder structure
-        link.download = 'cv.png'; // The name the file will be saved as
+        
+    function downloadCV() {
+        // Create a temporary anchor element
+        const link = document.createElement('a');
+        
+        // Set the file path to your PNG file in local storage
+        link.href = 'Shanmuganathan_v(resume).pdf'; // Adjust the path based on your folder structure
+        link.download = 'Shnmuganathan_cv.pdf'; // The name the file will be saved as
+
+        // Append the link to the document, trigger the download, and remove it
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
 
         // Append the link to the document, trigger the download, and remove it
         document.body.appendChild(link);
